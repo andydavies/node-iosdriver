@@ -1,0 +1,21 @@
+{
+  "name": "iosdriver",
+  "version": "0.0.1",
+  "description": "Allows communication with Safari running on iOS Simulator",
+  "main": "iosdriver.js",
+  "dependencies": {
+    "bplist-parser": "~0.0.4",
+    "bufferpack": "0.0.6",
+    "node-bplist-creator": "~0.0.2",
+    "node-uuid": "~1.4.0",
+    "plist": "~0.4.1"
+  },
+  "repository": { 
+    "type": "git",
+    "url": "https://github.com/andydavies/node-iosdriver"
+  },
+  "author": "Andy Davies (http://andydavies.me)",
+  "contributors": "Tom Ashworth (http://phuu.net/)",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
