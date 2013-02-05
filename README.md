@@ -11,6 +11,10 @@ Safari uses the same debugging commands as Chrome but wrapped as binary plists o
 A guide to the Chrome commands is available from Google:
 [https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/index](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/index)
 
+##Installation
+
+    $ npm install iosdriver
+
 ##Example
 
     var iOSDriver = require('iosdriver');
