@@ -1,6 +1,6 @@
 {
   "name": "iosdriver",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Allows communication with Safari running on iOS Simulator",
   "main": "iosdriver.js",
   "dependencies": {

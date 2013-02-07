@@ -85,9 +85,9 @@ var iOSDriver = function (host, port) {
     };
 
     this.socket = new net.Socket({type: 'tcp6'});
-    this.socket.connect(port, host, function () { console.log("socket connected"); });
+    this.socket.connect(port, host, function () { noop(); });
     this.socket.on('data', function (data) { driver._onData(data); });
-    this.socket.on('close', function () { console.log('socket disconnected'); });
+    this.socket.on('close', function () { noop(); });
 
     // @TODO these methods may need renaming
     this.setConnectionKey();
@@ -199,10 +199,11 @@ iOSDriver.prototype.indicateWebView = function(isWebView) {
  * Sends command to attached Safari instance 
  * @param {string} method 
  * @param {object} params
+ * @returns {int} id of message sent
  *
- * @see For commands and parameters see:  https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/index
+ * @see For commands and parameters:  https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/index
  */
-iOSDriver.prototype.sendCommand = function (method, params) {
+iOSDriver.prototype.sendCommand = function(method, params) {
     
     // data must be a buffer otherwise Safari will crash
     var data = new Buffer(JSON.stringify({
@@ -223,6 +224,8 @@ iOSDriver.prototype.sendCommand = function (method, params) {
     };
 
     this._send(msg);
+
+    return this.msg_id;
 };
 
 // Socket 
