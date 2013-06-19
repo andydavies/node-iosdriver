@@ -1,3 +1,5 @@
+**Google have released their own proxy for communicating with iOS Safari [ios-webkit-debug](https://github.com/google/ios-webkit-debug-proxy) and you proably want to use that instead of this**
+
 #node-iosdriver
 
 Allows communication with Safari running on iOS Simulator
